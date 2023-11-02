@@ -1,0 +1,32 @@
+Question: Take the last letters of each words in "Whitney Erika Tj Benito" and concatenate them.
+Solution:
+def solution():
+    s = "Whitney Erika Tj Benito"
+    words = s.split()
+    result = ''.join(word[-1] for word in words)
+    return result
+
+
+Question: Take the last letters of each words in "Lucky Mireya Jj Kc" and concatenate them.
+Solution:
+def solution():
+    s = "Lucky Mireya Jj Kc"
+    words = s.split()
+    result = ''.join(word[-1] for word in words)
+    return result
+
+Question: Take the last letters of each words in "Caleb Chase Eleazar Chanel" and concatenate them.
+Solution:
+def solution():
+    s = "Caleb Chase Eleazar Chanel"
+    words = s.split()
+    result = ''.join(word[-1] for word in words)
+    return result
+
+Question: Take the last letters of each words in "Silvia Carolina Stan Chuck" and concatenate them.
+Solution:
+def solution():
+    s = "Silvia Carolina Stan Chuck"
+    words = s.split()
+    result = ''.join(word[-1] for word in words)
+    return result

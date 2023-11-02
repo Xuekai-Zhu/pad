@@ -1,0 +1,1 @@
+All Data: 2097; Answer Right: 1694; Solve Rate: 0.8078206962327134

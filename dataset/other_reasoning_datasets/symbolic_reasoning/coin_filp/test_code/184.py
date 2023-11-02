@@ -1,0 +1,18 @@
+def solution():
+    coin = True
+    people = {
+        "Lynda": True,
+        "Danilo": True,
+        "Jonny": False,
+        "Judith": False
+    }
+    for person, flips in people.items():
+        if flips:
+            coin = not coin
+    if coin:
+        result = "yes"
+    else:
+        result = "no"
+    return result
+
+print(solution())

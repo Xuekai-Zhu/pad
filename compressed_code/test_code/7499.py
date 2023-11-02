@@ -1,0 +1,13 @@
+def solution():
+    
+    highway_miles = 210
+    city_miles = 54
+    highway_mpg = 35
+    city_mpg = 18
+    highway_gallons = highway_miles / highway_mpg
+    city_gallons = city_miles / city_mpg
+    total_gallons = highway_gallons + city_gallons
+    result = total_gallons
+    return result
+
+print(solution())

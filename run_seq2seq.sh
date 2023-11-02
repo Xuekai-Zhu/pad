@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES=0 python run_seq2seq.py \
+    --model_name_or_path pre_trained_model/Salesforce/codet5-small \
+    --do_train \
+    --do_eval \
+    --train_file dataset/gsm8k-generat-data/gsm8k-1/train_file/refine-train-delete-question.json \
+    --output_dir model/one-time-data/codet5-small \
+    --learning_rate=6e-5 \
+    --per_device_train_batch_size=8 \
+    --per_device_eval_batch_size=8 \
+    --evaluation_strategy "epoch" \
+    --save_strategy "epoch" \
+    --num_train_epochs 50 \
+    --overwrite_output_dir \
+    --load_best_model_at_end=True \
+    --report_to wandb

@@ -1,0 +1,12 @@
+def solution():
+    """A company produces chocolate in bars. In one day, it can produce 5000 bars. The company sells all the produced bars for $2 per bar. How much money will the company receive for selling produced chocolate bars during two weeks?"""
+    bars_per_day = 5000
+    days_per_week = 7
+    weeks = 2
+    price_per_bar = 2
+    total_bars = bars_per_day * days_per_week * weeks
+    total_money = total_bars * price_per_bar
+    result = total_money
+    return result
+
+print(solution())

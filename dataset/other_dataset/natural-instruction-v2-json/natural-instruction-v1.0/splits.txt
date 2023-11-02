@@ -1,0 +1,15 @@
+Following tasks are part of the evaluation split.
+1. subtask002_quoref_answer_generation
+2. subtask003_mctaco_question_generation_event_duration
+3. subtask005_mctaco_wrong_answer_generation_event_duration
+4. subtask008_mctaco_wrong_answer_generation_transient_stationary
+5. subtask022_cosmosqa_passage_inappropriate_binary
+6. subtask033_winogrande_answer_generation
+7. subtask034_winogrande_question_modification_object
+8. subtask039_qasc_find_overlapping_words
+9. subtask040_qasc_question_generation
+10. subtask044_essential_terms_identifying_essential_words
+11. subtask045_miscellaneous_sentence_paraphrasing
+12. subtask052_multirc_identify_bad_question
+
+Rest of the tasks are in the training split.

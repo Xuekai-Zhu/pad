@@ -1,0 +1,105 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\n\ndef solution():\n    \"\"\"Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. \n    How many clips did Natalia sell altogether in April and May?\"\"\"\n    april_sales = 48\n    may_sales = april_sales / 2\n    total_sales = april_sales + may_sales\n    result = total_sales\n    return result",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1677768261,
+  "id": "chatcmpl-6peSLK74IYARbzt5nSs1F6xyuOkJB",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 672,
+    "total_tokens": 756
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\n\ndef solution():\n    \"\"\"Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?\"\"\"\n    hourly_rate = 12\n    minutes_worked = 50\n    fraction_of_hour = minutes_worked / 60\n    earnings = hourly_rate * fraction_of_hour\n    result = earnings\n    return result",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1677768263,
+  "id": "chatcmpl-6peSNn3q62WRzh8l9hIZAmPvFolhn",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 664,
+    "total_tokens": 746
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\n\ndef solution():\n    \"\"\"Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs.\n    Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents.\n    How much more money does Betty need to buy the wallet?\"\"\"\n    wallet_cost = 100\n    money_saved = wallet_cost / 2\n    parent_contribution = 15\n    grandparent_contribution = 2 * parent_contribution\n    total_contribution = parent_contribution + grandparent_contribution\n    money_needed = wallet_cost - (money_saved + total_contribution)\n    result = money_needed\n    return result",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1677768264,
+  "id": "chatcmpl-6peSOVBWxxK5ygsrXCy5MjFa2lc7e",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 144,
+    "prompt_tokens": 692,
+    "total_tokens": 836
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\n\ndef solution():\n    \"\"\"Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday.\n    If she wants to read half of the remaining pages tomorrow, how many pages should she read?\"\"\"\n    total_pages = 120\n    pages_read_yesterday = 12\n    pages_read_today = pages_read_yesterday * 2\n    remaining_pages = total_pages - pages_read_yesterday - pages_read_today\n    pages_to_read_tomorrow = remaining_pages / 2\n    result = pages_to_read_tomorrow\n    return result",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1677768266,
+  "id": "chatcmpl-6peSQquqmjOM27HFDcCKGS3dJfz2R",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 132,
+    "prompt_tokens": 685,
+    "total_tokens": 817
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\n\ndef solution():\n    \"\"\"James writes a 3-page letter to 2 different friends twice a week. How many pages does he write a year?\"\"\"\n    pages_per_letter = 3\n    letters_per_week = 2\n    weeks_per_year = 52\n    total_pages = pages_per_letter * letters_per_week * weeks_per_year\n    result = total_pages\n    return result",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1677768272,
+  "id": "chatcmpl-6peSWICvY3I91oVoex6mqzSpqYiv5",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 661,
+    "total_tokens": 743
+  }
+}

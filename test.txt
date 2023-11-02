@@ -1,0 +1,40 @@
+def solution():
+    # Calculate the total amount of feed needed for the day
+    total_feed = 3 * 3  # Wendi feeds three cups of chicken feed in three separate meals
+    morning_feed = 15  # Wendi gives her chickens 15 cups of feed in the morning
+    afternoon_feed = 25  # Wendi gives her chickens 25 cups of feed in the afternoon
+    remaining_feed = total_feed - morning_feed - afternoon_feed
+    result = remaining_feed
+    return result
+def solution():
+    # Calculate the total amount of feed needed for the day
+    total_feed = 3 * 3  # Wendi feeds three cups of chicken feed each of her three separate meals
+    morning_feed = 15  # Wendi gives her chickens 15 cups of feed in the morning
+    afternoon_feed = 25  # Wendi gives her chickens 25 cups of feed in the afternoon
+    remaining_feed = total_feed - morning_feed - afternoon_feed  # Wendi needs to give the remaining feed to get the remaining feed
+    result = remaining_feed
+    return result
+def solution():
+    # Calculate the total amount of feed needed for the day
+    total_feed = 3 * 3  # Wendi feeds three cups of chicken feed each of her three separate meals
+    morning_feed = 15  # Wendi gives her chickens 15 cups of feed in the morning
+    afternoon_feed = 25  # Wendi gives her chickens 25 cups of feed in the afternoon
+    remaining_feed = total_feed - morning_feed - afternoon_feed  # Wendi has the remaining feed left after giving the morning and afternoon
+    result = remaining_feed
+    return result
+def solution():
+    # Calculate the total amount of feed needed for the day
+    total_feed = 3 * 3  # Wendi feeds three cups of chicken feed each of her three separate meals
+    morning_feed = 15  # Wendi gives her chickens 15 cups of feed in the morning
+    afternoon_feed = 25  # Wendi gives her chickens 25 cups of feed in the afternoon
+    remaining_feed = total_feed - morning_feed - afternoon_feed  # Wendi needs to give the remaining feed to the final meal
+    result = remaining_feed
+    return result
+def solution():
+    # Calculate the total amount of feed needed for the day
+    total_feed = 3 * 3  # Wendi feeds three cups of chicken feed each of her three separate meals
+    morning_feed = 15  # Wendi gives her chickens 15 cups of feed in the morning
+    afternoon_feed = 25  # Wendi gives her chickens 25 cups of feed in the afternoon
+    remaining_feed = total_feed - morning_feed - afternoon_feed  # Wendi has this much feed left to give to her chickens in the final meal
+    result = remaining_feed
+    return result

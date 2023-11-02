@@ -1,0 +1,14 @@
+def solution():
+    # Calculate Mohamed's current age
+    mohamed_age = 2 * 30  # Twice 30 years old
+
+    # Calculate Kody's age four years ago
+    kody_age_4_years_ago = mohamed_age / 2
+
+    # Calculate Kody's current age
+    kody_age = kody_age_4_years_ago + 4  # Kody was half as old as Mohamed four years ago
+
+    result = kody_age
+    return result
+
+print(solution())

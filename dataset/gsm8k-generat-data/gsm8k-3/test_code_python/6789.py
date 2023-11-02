@@ -1,0 +1,17 @@
+def solution():
+    """It's payday but Jebb has to pay 10% for the tax. If his pay is $650, how much is his take-home pay?"""
+    # Define Jebb's pay and the tax rate
+    pay = 650
+    tax_rate = 0.1
+
+    # Calculate the amount of tax Jebb has to pay
+    tax = pay * tax_rate
+
+    # Calculate Jebb's take-home pay
+    take_home_pay = pay - tax
+
+    # Display Jebb's take-home pay
+    result = take_home_pay
+    return result
+
+print(solution())

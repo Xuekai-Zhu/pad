@@ -1,0 +1,1 @@
+use the final layer gradient's mean to plot the figure

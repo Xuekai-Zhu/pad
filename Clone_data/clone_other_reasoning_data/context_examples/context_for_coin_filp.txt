@@ -1,0 +1,79 @@
+Question: A coin is heads up. Whitney flips the coin. Erika does not flip the coin. Tj does not flip the coin. Benito flips the coin. Is the coin still heads up? Note that "flip" here means "reverse".
+Solution:
+def solution():
+    coin = True
+    people = {
+        "Whitney": True,
+        "Erika": False,
+        "Tj": False,
+        "Benito": True
+    }
+    for person, flips in people.items():
+        if flips:
+            coin = not coin
+    if coin:
+        result = "yes"
+    else:
+        result = "no"
+    return result
+ 
+Question: A coin is heads up. Lucky does not flip the coin. Mireya flips the coin. Jj flips the coin. Kc flips the coin. Is the coin still heads up? Note that "flip" here means "reverse"
+Solution:
+def solution():
+    coin = True
+    people = {
+        "Lucky": False,
+        "Mireya": True,
+        "Jj": True,
+        "Kc": True
+    }
+    for person, flips in people.items():
+        if flips:
+            coin = not coin
+    if coin:
+        result = "yes"
+    else:
+        result = "no"
+    
+    return result
+
+Question: A coin is heads up. Caleb flips the coin. Chase flips the coin. Eleazar flips the coin. Chanel does not flip the coin. Is the coin still heads up? Note that "flip" here means "reverse".
+Solution:
+def solution():
+    coin = True
+    people = {
+        "Caleb": True,
+        "Chase": True,
+        "Eleazar": True,
+        "Chanel": False
+    }
+    for person, flips in people.items():
+        if flips:
+            coin = not coin
+    if coin:
+        result = "yes"
+    else:
+        result = "no"
+    return result
+
+
+
+Question: A coin is heads up. Silvia flips the coin. Carolina does not flip the coin. Stan flips the coin. Chuck flips the coin. Is the coin still heads up? Note that "flip" here means "reverse".
+Solution:
+def solution():
+    coin = True
+    people = {
+        "Silvia": True,
+        "Carolina": False,
+        "Stan": True,
+        "Chuck": True
+    }
+    for person, flips in people.items():
+        if flips:
+            # Flip the coin by reversing its current state
+            coin = not coin
+    if coin:
+        result = "yes"
+    else:
+        result = "no"
+    return result

@@ -1,0 +1,43 @@
+Question: Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?
+Solution:
+def solution():
+    eggs_per_day = 16
+    eggs_eaten = 3
+    eggs_baked = 4
+    eggs_sold = eggs_per_day - eggs_eaten - eggs_baked
+    price_per_egg = 2
+    money_made = eggs_sold * price_per_egg
+    result = money_made
+    return result
+
+Question: A robe takes 2 bolts of blue fiber and half that much white fiber. How many bolts in total does it take?
+Solution:
+def solution():
+    blue_fiber = 2
+    white_fiber = blue_fiber / 2
+    total_fiber = blue_fiber + white_fiber
+    result = total_fiber
+    return result
+
+Question: Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?
+Solution: 
+def solution():
+    initial_cost = 80000
+    repair_cost = 50000
+    percent_increase = 150
+    increase_amount = initial_cost * (percent_increase / 100)
+    sale_price = increase_amount + initial_cost
+    profit = sale_price - (initial_cost + repair_cost)
+    result = profit
+    
+    return result
+
+Question: James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?
+Solution:
+def solution():
+    sprints_per_day = 3
+    days_per_week = 3
+    meters_per_sprint = 60
+    total_meters = sprints_per_day * days_per_week * meters_per_sprint
+    result = total_meters
+    return result

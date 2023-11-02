@@ -1,0 +1,97 @@
+Question: John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very important at home.  He tries to get home in 4 hours but spends the first 2 hours in standstill traffic.  He spends the next half-hour driving at a speed of 30mph, before being able to drive the remaining time of the 4 hours going at 80 mph.  How far is he from home at the end of those 4 hours ?
+Solution:
+def solution():
+    """John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very important at home.  He tries to get home in 4 hours but spends the first 2 hours in standstill traffic.  He spends the next half-hour driving at a speed of 30mph, before being able to drive the remaining time of the 4 hours going at 80 mph.  How far is he from home at the end of those 4 hours ?"""
+    # John's first trip
+    distance1 = 60 * 3 # distance = speed * time
+
+    # John's second trip
+    distance2 = 0 # initialize distance2
+    # Distance traveled in standstill traffic
+    distance2 += 0 # the first 2 hours are spent in standstill traffic
+    # Distance traveled at 30 mph
+    distance2 += 30 * 0.5
+    # Distance traveled at 80 mph
+    distance2 += 80 * (4 - 2.5)
+
+    # Total distance traveled
+    total_distance = distance1 - distance2
+    result = total_distance
+    return result
+
+Question: Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate. If Eliza worked for 45 hours this week, how much are her earnings for this week ?
+Solution:
+def solution():
+    """Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate. If Eliza worked for 45 hours this week, how much are her earnings for this week ?"""
+    # Define the regular hourly rate and overtime pay multiplier
+    REGULAR_RATE = 10
+    OVERTIME_MULTIPLIER = 1.2
+
+    # Get the number of hours Eliza worked
+    hours_worked = 45
+
+    # Calculate Eliza's earnings
+    if hours_worked <= 40:
+        earnings = hours_worked * REGULAR_RATE
+    else:
+        regular_hours = 40
+        overtime_hours = hours_worked - 40
+        regular_earnings = regular_hours * REGULAR_RATE
+        overtime_earnings = overtime_hours * REGULAR_RATE * OVERTIME_MULTIPLIER
+        earnings = regular_earnings + overtime_earnings
+
+    # Display Eliza's earnings
+    result = earnings
+    return result
+
+Question: A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many as the downloads in the first month, but then reduced by 30% in the third month. How many downloads did the program have total over the three months ?
+Solution:
+def solution():
+    """A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many as the downloads in the first month, but then reduced by 30% in the third month. How many downloads did the program have total over the three months ?"""
+    # Define the number of downloads in the first month
+    downloads_1 = 60
+
+    # Calculate the number of downloads in the second month
+    downloads_2 = downloads_1 * 3
+
+    # Calculate the number of downloads in the third month
+    downloads_3 = downloads_2 * 0.7
+
+    # Calculate the total number of downloads over the three months
+    total_downloads = downloads_1 + downloads_2 + downloads_3
+
+    # Display the total number of downloads
+    result = Display
+    return result
+
+Question: Toula went to the bakery and bought various types of pastries. She bought 3 dozen donuts which cost $68 per dozen, 2 dozen mini cupcakes which cost $80 per dozen, and 6 dozen mini cheesecakes for $55 per dozen. How much was the total cost ?
+Solution:
+def solution():
+    """Toula went to the bakery and bought various types of pastries. She bought 3 dozen donuts which cost $68 per dozen, 2 dozen mini cupcakes which cost $80 per dozen, and 6 dozen mini cheesecakes for $55 per dozen. How much was the total cost ?"""
+    # Define the cost of each type of pastry per dozen
+    DONUT_PRICE = 68
+    CUPCAKE_PRICE = 80
+    CHEESECAKE_PRICE = 55
+
+    # Define the number of dozens of each type of pastry purchased
+    donut_dozens = 3
+    cupcake_dozens = 2
+    cheesecake_dozens = 6
+
+    # Calculate the total cost of the donuts
+    donut_cost = donut_dozens * DONUT_PRICE
+
+    # Calculate the total cost of the mini cupcakes
+    cupcake_cost = cupcake_dozens * CUPCAKE_PRICE
+
+    # Calculate the total cost of the mini cheesecakes
+    cheesecake_cost = cheesecake_dozens * CHEESECAKE_PRICE
+
+    # Calculate the total cost of all the pastries
+    total_cost = donut_cost + cupcake_cost + cheesecake_cost
+
+    # Display the total cost
+    result = total_cost
+    return result
+
+

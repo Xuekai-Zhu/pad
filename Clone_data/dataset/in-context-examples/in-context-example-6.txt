@@ -1,0 +1,44 @@
+Question: I have 10 liters of orange drink that are two-thirds water and I wish to add it to 15 liters of pineapple drink that is three-fifths water. But as I pour it, I spill one liter of the orange drink. How much water is in the remaining 24 liters ?
+Solution:
+def solution():
+    orange_drink = 10  # liters of orange drink
+    orange_drink_water = (2/3) * orange_drink  # liters of water in orange drink
+    pineapple_drink = 15  # liters of pineapple drink
+    pineapple_drink_water = (3/5) * pineapple_drink  # liters of water in pineapple drink
+    remaining_drink = orange_drink - 1  # liters of orange drink remaining after spilling 1 liter
+    remaining_drink_water = (2/3) * remaining_drink  # liters of water in remaining orange drink
+    total_drink = remaining_drink + pineapple_drink  # total liters of drink
+    total_drink_water = remaining_drink_water + pineapple_drink_water  # total liters of water in the drink
+
+    # Calculate the amount of water in the remaining 24 liters of drink
+    water_in_24_liters = (total_drink_water / total_drink) * 24
+    result = water_in_24_liters
+    return result
+
+Question: Raymond and Samantha are cousins. Raymond was born 6 years before Samantha. Raymond had a son at the age of 23. If Samantha is now 31, how many years ago was Raymond's son born ?
+Solution:
+def solution():
+    # Find the Raymond age
+    age_Raymond = 31 + 6  
+
+    # Find the number of years ago Raymond's son was born
+    years_ago = age_Raymond - 23
+    result = years_ago
+    return result
+
+Question: Billy sells DVDs. He has 8 customers on Tuesday. His first 3 customers buy one DVD each.  His next 2 customers buy 2 DVDs each.  His last 3 customers don't buy any DVDs. How many DVDs did Billy sell on Tuesday ?
+Solution:
+def solution():
+    # Calculate the total number of DVDs sold by Billy on Tuesday
+    total_DVDs = 3 + 2*2 + 0*3  # first 3 customers buy 1 DVD each, next 2 customers buy 2 DVDs each, last 3 customers don't buy any DVDs
+    result = total_DVDs
+    return result
+
+Question: A candle melts by 2 centimeters every hour that it burns. How many centimeters shorter will a candle be after burning from 1:00 PM to 5:00 PM ?
+Solution:
+def solution():
+    # Calculate the length of the candle burnt in 4 hours
+    burnt_length = 2 * 4  # the candle melts by 2 centimeters every hour
+    result = burnt_length
+    return result
+

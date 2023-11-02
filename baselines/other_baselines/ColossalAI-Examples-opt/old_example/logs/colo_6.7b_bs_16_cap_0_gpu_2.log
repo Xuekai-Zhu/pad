@@ -1,0 +1,407 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[01/29/23 14:27:47] INFO     colossalai - colossalai - INFO:                                                                                           
+                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:521 set_device               
+                    INFO     colossalai - colossalai - INFO: process rank 1 is bound to device 1                                                       
+[01/29/23 14:27:47] INFO     colossalai - colossalai - INFO:                                                                                           
+                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:521 set_device               
+                    INFO     colossalai - colossalai - INFO: process rank 0 is bound to device 0                                                       
+[01/29/23 14:27:50] INFO     colossalai - colossalai - INFO:                                                                                           
+                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:557 set_seed                 
+[01/29/23 14:27:50] INFO     colossalai - colossalai - INFO:                                                                                           
+                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:557 set_seed                 
+                    INFO     colossalai - colossalai - INFO: initialized seed on rank 0, numpy: 1024, python random: 1024, ParallelMode.DATA: 1024,    
+                             ParallelMode.TENSOR: 1024,the default parallel seed is ParallelMode.DATA.                                                 
+                    INFO     colossalai - colossalai - INFO: initialized seed on rank 1, numpy: 1024, python random: 1024, ParallelMode.DATA: 1024,    
+                             ParallelMode.TENSOR: 1024,the default parallel seed is ParallelMode.DATA.                                                 
+                    INFO     colossalai - colossalai - INFO: /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/initialize.py:117 launch 
+                    INFO     colossalai - colossalai - INFO: Distributed environment is initialized, data parallel size: 2, pipeline parallel size: 1, 
+                             tensor parallel size: 1                                                                                                   
+                    INFO     colossalai - colossalai - INFO: run_clm.py:280 main                                                                       
+                    INFO     colossalai - colossalai - INFO: Start preparing dataset                                                                   
+Found cached dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 436.76it/s]
+[01/29/23 14:27:56] INFO     colossalai - colossalai - INFO: run_clm.py:321 main                                                                       
+                    INFO     colossalai - colossalai - INFO: Dataset is prepared                                                                       
+Found cached dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 405.17it/s]
+[01/29/23 14:27:57] INFO     colossalai - colossalai - INFO: run_clm.py:337 main                                                                       
+                    INFO     colossalai - colossalai - INFO: Model config has been created                                                             
+[01/29/23 14:27:58] INFO     colossalai - colossalai - INFO: run_clm.py:343 main                                                                       
+                    INFO     colossalai - colossalai - INFO: GPT2Tokenizer has been created                                                            
+                    INFO     colossalai - colossalai - INFO: run_clm.py:358 main                                                                       
+                    INFO     colossalai - colossalai - INFO: Finetune a pre-trained model                                                              
+[01/29/23 14:28:00] INFO     colossalai - ProcessGroup - INFO:                                                                                         
+                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/tensor/process_group.py:24 get                           
+                    INFO     colossalai - ProcessGroup - INFO: NCCL initialize ProcessGroup on [0]                                                     
+                    INFO     colossalai - ProcessGroup - INFO:                                                                                         
+                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/tensor/process_group.py:24 get                           
+                    INFO     colossalai - ProcessGroup - INFO: NCCL initialize ProcessGroup on [1]                                                     
+                    INFO     colossalai - ProcessGroup - INFO:                                                                                         
+                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/tensor/process_group.py:24 get                           
+                    INFO     colossalai - ProcessGroup - INFO: NCCL initialize ProcessGroup on [0, 1]                                                  
+╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
+│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
+│ .py:574 in <module>                                                                              │
+│                                                                                                  │
+│   571                                                                                            │
+│   572                                                                                            │
+│   573 if __name__ == "__main__":                                                                 │
+│ ❱ 574 │   main()                                                                                 │
+│                                                                                                  │
+│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
+│ .py:360 in main                                                                                  │
+│                                                                                                  │
+│   357 │   else:                                                                                  │
+│   358 │   │   logger.info("Finetune a pre-trained model", ranks=[0])                             │
+│   359 │   │   with ColoInitContext(device=init_dev):                                             │
+│ ❱ 360 │   │   │   model = OPTForCausalLM.from_pretrained(                                        │
+│   361 │   │   │   │   args.model_name_or_path,                                                   │
+│   362 │   │   │   │   from_tf=bool(".ckpt" in args.model_name_or_path),                          │
+│   363 │   │   │   │   config=config,                                                             │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py:2276 in     │
+│ from_pretrained                                                                                  │
+│                                                                                                  │
+│   2273 │   │   │   init_contexts.append(init_empty_weights())                                    │
+│   2274 │   │                                                                                     │
+│   2275 │   │   with ContextManagers(init_contexts):                                              │
+│ ❱ 2276 │   │   │   model = cls(config, *model_args, **model_kwargs)                              │
+│   2277 │   │                                                                                     │
+│   2278 │   │   if load_in_8bit:                                                                  │
+│   2279 │   │   │   from .utils.bitsandbytes import get_keys_to_not_convert, replace_8bit_linear  │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:81 │
+│ 3 in __init__                                                                                    │
+│                                                                                                  │
+│    810 │                                                                                         │
+│    811 │   def __init__(self, config):                                                           │
+│    812 │   │   super().__init__(config)                                                          │
+│ ❱  813 │   │   self.model = OPTModel(config)                                                     │
+│    814 │   │                                                                                     │
+│    815 │   │   # the lm_head weight is automatically tied to the embed tokens weight             │
+│    816 │   │   self.lm_head = nn.Linear(config.word_embed_proj_dim, config.vocab_size, bias=Fal  │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:74 │
+│ 3 in __init__                                                                                    │
+│                                                                                                  │
+│    740 class OPTModel(OPTPreTrainedModel):                                                       │
+│    741 │   def __init__(self, config: OPTConfig):                                                │
+│    742 │   │   super().__init__(config)                                                          │
+│ ❱  743 │   │   self.decoder = OPTDecoder(config)                                                 │
+│    744 │   │   # Initialize weights and apply final processing                                   │
+│    745 │   │   self.post_init()                                                                  │
+│    746                                                                                           │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:51 │
+│ 9 in __init__                                                                                    │
+│                                                                                                  │
+│    516 │   │   else:                                                                             │
+│    517 │   │   │   self.final_layer_norm = None                                                  │
+│    518 │   │                                                                                     │
+│ ❱  519 │   │   self.layers = nn.ModuleList([OPTDecoderLayer(config) for _ in range(config.num_h  │
+│    520 │   │                                                                                     │
+│    521 │   │   self.gradient_checkpointing = False                                               │
+│    522 │   │   # Initialize weights and apply final processing                                   │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:51 │
+│ 9 in <listcomp>                                                                                  │
+│                                                                                                  │
+│    516 │   │   else:                                                                             │
+│    517 │   │   │   self.final_layer_norm = None                                                  │
+│    518 │   │                                                                                     │
+│ ❱  519 │   │   self.layers = nn.ModuleList([OPTDecoderLayer(config) for _ in range(config.num_h  │
+│    520 │   │                                                                                     │
+│    521 │   │   self.gradient_checkpointing = False                                               │
+│    522 │   │   # Initialize weights and apply final processing                                   │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:29 │
+│ 1 in __init__                                                                                    │
+│                                                                                                  │
+│    288 │   │   self.self_attn_layer_norm = nn.LayerNorm(                                         │
+│    289 │   │   │   self.embed_dim, elementwise_affine=config.layer_norm_elementwise_affine       │
+│    290 │   │   )                                                                                 │
+│ ❱  291 │   │   self.fc1 = nn.Linear(self.embed_dim, config.ffn_dim, bias=config.enable_bias)     │
+│    292 │   │   self.fc2 = nn.Linear(config.ffn_dim, self.embed_dim, bias=config.enable_bias)     │
+│    293 │   │   self.final_layer_norm = nn.LayerNorm(self.embed_dim, elementwise_affine=config.l  │
+│    294                                                                                           │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:55 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│    54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│ ❱  55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│    58                                                                                            │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/colo_init_context.p │
+│ y:126 in _post_init_method                                                                       │
+│                                                                                                  │
+│   123 │   │   │   if param in replaced_tensors:                                                  │
+│   124 │   │   │   │   colo_param = replaced_tensors[param]                                       │
+│   125 │   │   │   else:                                                                          │
+│ ❱ 126 │   │   │   │   colo_param = _convert_to_coloparam(param, self._device, self._dtype, sel   │
+│   127 │   │   │   │   │   │   │   │   │   │   │   │      self._default_dist_spec)                │
+│   128 │   │   │   │   replaced_tensors[param] = colo_param                                       │
+│   129 │   │   │   delattr(submodule, param_name)                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/colo_init_context.p │
+│ y:44 in _convert_to_coloparam                                                                    │
+│                                                                                                  │
+│    41 │   if param.device.type == "meta":                                                        │
+│    42 │   │   colo_param = ColoParameter(param, requires_grad=requires_grad)                     │
+│    43 │   else:                                                                                  │
+│ ❱  44 │   │   colo_param = ColoParameter(param.to(device=device, dtype=dtype), requires_grad=r   │
+│    45 │                                                                                          │
+│    46 │                                                                                          │
+│    47 │   # if default_shard_plan exists, shard the param during initialization.                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: CUDA out of memory. Tried to allocate 256.00 MiB (GPU 1; 23.70 GiB total capacity; 22.80 GiB already allocated; 94.56 MiB free; 22.81 GiB
+reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for 
+Memory Management and PYTORCH_CUDA_ALLOC_CONF
+╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
+│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
+│ .py:574 in <module>                                                                              │
+│                                                                                                  │
+│   571                                                                                            │
+│   572                                                                                            │
+│   573 if __name__ == "__main__":                                                                 │
+│ ❱ 574 │   main()                                                                                 │
+│                                                                                                  │
+│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
+│ .py:360 in main                                                                                  │
+│                                                                                                  │
+│   357 │   else:                                                                                  │
+│   358 │   │   logger.info("Finetune a pre-trained model", ranks=[0])                             │
+│   359 │   │   with ColoInitContext(device=init_dev):                                             │
+│ ❱ 360 │   │   │   model = OPTForCausalLM.from_pretrained(                                        │
+│   361 │   │   │   │   args.model_name_or_path,                                                   │
+│   362 │   │   │   │   from_tf=bool(".ckpt" in args.model_name_or_path),                          │
+│   363 │   │   │   │   config=config,                                                             │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py:2276 in     │
+│ from_pretrained                                                                                  │
+│                                                                                                  │
+│   2273 │   │   │   init_contexts.append(init_empty_weights())                                    │
+│   2274 │   │                                                                                     │
+│   2275 │   │   with ContextManagers(init_contexts):                                              │
+│ ❱ 2276 │   │   │   model = cls(config, *model_args, **model_kwargs)                              │
+│   2277 │   │                                                                                     │
+│   2278 │   │   if load_in_8bit:                                                                  │
+│   2279 │   │   │   from .utils.bitsandbytes import get_keys_to_not_convert, replace_8bit_linear  │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:81 │
+│ 3 in __init__                                                                                    │
+│                                                                                                  │
+│    810 │                                                                                         │
+│    811 │   def __init__(self, config):                                                           │
+│    812 │   │   super().__init__(config)                                                          │
+│ ❱  813 │   │   self.model = OPTModel(config)                                                     │
+│    814 │   │                                                                                     │
+│    815 │   │   # the lm_head weight is automatically tied to the embed tokens weight             │
+│    816 │   │   self.lm_head = nn.Linear(config.word_embed_proj_dim, config.vocab_size, bias=Fal  │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:74 │
+│ 3 in __init__                                                                                    │
+│                                                                                                  │
+│    740 class OPTModel(OPTPreTrainedModel):                                                       │
+│    741 │   def __init__(self, config: OPTConfig):                                                │
+│    742 │   │   super().__init__(config)                                                          │
+│ ❱  743 │   │   self.decoder = OPTDecoder(config)                                                 │
+│    744 │   │   # Initialize weights and apply final processing                                   │
+│    745 │   │   self.post_init()                                                                  │
+│    746                                                                                           │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:51 │
+│ 9 in __init__                                                                                    │
+│                                                                                                  │
+│    516 │   │   else:                                                                             │
+│    517 │   │   │   self.final_layer_norm = None                                                  │
+│    518 │   │                                                                                     │
+│ ❱  519 │   │   self.layers = nn.ModuleList([OPTDecoderLayer(config) for _ in range(config.num_h  │
+│    520 │   │                                                                                     │
+│    521 │   │   self.gradient_checkpointing = False                                               │
+│    522 │   │   # Initialize weights and apply final processing                                   │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:51 │
+│ 9 in <listcomp>                                                                                  │
+│                                                                                                  │
+│    516 │   │   else:                                                                             │
+│    517 │   │   │   self.final_layer_norm = None                                                  │
+│    518 │   │                                                                                     │
+│ ❱  519 │   │   self.layers = nn.ModuleList([OPTDecoderLayer(config) for _ in range(config.num_h  │
+│    520 │   │                                                                                     │
+│    521 │   │   self.gradient_checkpointing = False                                               │
+│    522 │   │   # Initialize weights and apply final processing                                   │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:54 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    51 │   │   │                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│ ❱  54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│    55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py:29 │
+│ 1 in __init__                                                                                    │
+│                                                                                                  │
+│    288 │   │   self.self_attn_layer_norm = nn.LayerNorm(                                         │
+│    289 │   │   │   self.embed_dim, elementwise_affine=config.layer_norm_elementwise_affine       │
+│    290 │   │   )                                                                                 │
+│ ❱  291 │   │   self.fc1 = nn.Linear(self.embed_dim, config.ffn_dim, bias=config.enable_bias)     │
+│    292 │   │   self.fc2 = nn.Linear(config.ffn_dim, self.embed_dim, bias=config.enable_bias)     │
+│    293 │   │   self.final_layer_norm = nn.LayerNorm(self.embed_dim, elementwise_affine=config.l  │
+│    294                                                                                           │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/utils.py:55 in      │
+│ wrapper                                                                                          │
+│                                                                                                  │
+│    52 │   │   │   @functools.wraps(f)                                                            │
+│    53 │   │   │   def wrapper(module: torch.nn.Module, *args, **kwargs):                         │
+│    54 │   │   │   │   f(module, *args, **kwargs)                                                 │
+│ ❱  55 │   │   │   │   self._post_init_method(module, *args, **kwargs)                            │
+│    56 │   │   │                                                                                  │
+│    57 │   │   │   return wrapper                                                                 │
+│    58                                                                                            │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/colo_init_context.p │
+│ y:126 in _post_init_method                                                                       │
+│                                                                                                  │
+│   123 │   │   │   if param in replaced_tensors:                                                  │
+│   124 │   │   │   │   colo_param = replaced_tensors[param]                                       │
+│   125 │   │   │   else:                                                                          │
+│ ❱ 126 │   │   │   │   colo_param = _convert_to_coloparam(param, self._device, self._dtype, sel   │
+│   127 │   │   │   │   │   │   │   │   │   │   │   │      self._default_dist_spec)                │
+│   128 │   │   │   │   replaced_tensors[param] = colo_param                                       │
+│   129 │   │   │   delattr(submodule, param_name)                                                 │
+│                                                                                                  │
+│ /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/utils/model/colo_init_context.p │
+│ y:44 in _convert_to_coloparam                                                                    │
+│                                                                                                  │
+│    41 │   if param.device.type == "meta":                                                        │
+│    42 │   │   colo_param = ColoParameter(param, requires_grad=requires_grad)                     │
+│    43 │   else:                                                                                  │
+│ ❱  44 │   │   colo_param = ColoParameter(param.to(device=device, dtype=dtype), requires_grad=r   │
+│    45 │                                                                                          │
+│    46 │                                                                                          │
+│    47 │   # if default_shard_plan exists, shard the param during initialization.                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: CUDA out of memory. Tried to allocate 256.00 MiB (GPU 0; 23.70 GiB total capacity; 22.80 GiB already allocated; 94.56 MiB free; 22.81 GiB
+reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for 
+Memory Management and PYTORCH_CUDA_ALLOC_CONF
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 26332 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 1 (pid: 26333) of binary: /root/anaconda3/envs/py38/bin/python
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/py38/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/run.py", line 761, in main
+    run(args)
+  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/run.py", line 752, in run
+    elastic_launch(
+  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 245, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+run_clm.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-01-29_14:28:59
+  host      : f9748dd6478e
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 26333)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

@@ -1,0 +1,10 @@
+def solution():
+    total_savings = 80
+    earrings_cost = 23
+    necklace_cost = 48
+    total_cost = earrings_cost + necklace_cost
+    savings_left = total_savings - total_cost
+    result = savings_left
+    return result
+
+print(solution())

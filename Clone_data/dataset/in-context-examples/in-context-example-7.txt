@@ -1,0 +1,75 @@
+Question: Kyle bought last year's best-selling book for $19.50. This is with a 25% discount from the original price. What was the original price of the book ?
+Solution:
+def solution():
+    discounted_price = 19.50
+    discount = 0.25  # 25% discount
+    original_price = discounted_price / (1 - discount)
+    result = original_price
+    return result
+
+Question: Marie ordered one chicken meal that costs $12, 5 packs of milk that costs $3 each, 4 apples that cost $1.50 each, and some boxes of pizza. Marie paid a total of $50. How many boxes of pizza did Marie order if each box costs $8.50 ?
+Solution:
+def solution():
+    chicken_meal = 12
+    milk_packs = 5
+    milk_price = 3
+    apples = 4
+    apple_price = 1.5
+    total_paid = 50
+
+    pizza_price = 8.5
+
+    # Calculate the total cost of all items except pizza
+    total_without_pizza = chicken_meal + (milk_packs * milk_price) + (apples * apple_price)
+
+    # Calculate the cost of pizza
+    pizza_cost = total_paid - total_without_pizza
+
+    # Calculate the number of boxes of pizza
+    num_pizza_boxes = pizza_cost / pizza_price
+    result = num_pizza_boxes
+    return result
+
+Question: Mishka bought 3 pairs of shorts, 3 pairs of pants, and 3 pairs of shoes. One pair of shorts costs $16.50. One pair of pants costs $22.50 and one pair of shoes costs $42. How many dollars did Mishka spend on all the clothing items ?
+Solution:
+def solution():
+    num_shorts = 3
+    shorts_price = 16.5
+
+    num_pants = 3
+    pants_price = 22.5
+
+    num_shoes = 3
+    shoes_price = 42
+
+    # Calculate the total cost of all shorts
+    total_shorts_cost = num_shorts * shorts_price
+
+    # Calculate the total cost of all pants
+    total_pants_cost = num_pants * pants_price
+
+    # Calculate the total cost of all shoes
+    total_shoes_cost = num_shoes * shoes_price
+
+    # Calculate the total cost of all clothing items
+    total_cost = total_shorts_cost + total_pants_cost + total_shoes_cost
+    result = total_cost
+    return result
+
+Question: Cynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream ？
+Solution:
+def solution():
+    num_servings_per_carton = 15
+    cost_per_carton = 4.0
+    num_days = 60
+
+    # Calculate the total number of servings of ice cream that Cynthia will eat
+    total_servings = num_days
+
+    # Calculate the total number of cartons of ice cream that Cynthia will buy
+    total_cartons = total_servings / num_servings_per_carton
+
+    # Calculate the total cost of all cartons of ice cream that Cynthia will buy
+    total_cost = total_cartons * cost_per_carton
+    result = total_cost
+    return result
