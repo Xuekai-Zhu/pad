@@ -1,0 +1,5 @@
+Outcome,Count
+Non-matching Answers,754
+SyntaxError,10
+NameError,63
+UnboundLocalError,14

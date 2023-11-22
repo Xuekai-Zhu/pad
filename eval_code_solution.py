@@ -152,14 +152,14 @@ if __name__ == '__main__':
     
     # our fine-tune model
     # gsm8k
-    # result_dir = "model/one-time-data/codet5-large"
-    # test_file = result_dir + "/" + "generated_predictions.json"
-    # gloden_file = "dataset/gsm8k-generat-data/gsm8k-1/test_file/test_add_code.json"
-    # save_dir = result_dir + "/" + "test_code_python"
-    # test_code_solution_for_predict(test_file=test_file, golden_file=gloden_file, save_dir=save_dir)
+    result_dir = "model/code-t5-small/code-t5-samll-enhanced-7time-learning-6e-5"
+    test_file = result_dir + "/" + "generated_predictions.json"
+    gloden_file = "dataset/gsm8k-generat-data/gsm8k-1/test_file/test_add_code.json"
+    save_dir = result_dir + "/" + "test_code_python"
+    test_code_solution_for_predict(test_file=test_file, golden_file=gloden_file, save_dir=save_dir)
     
-    # result_file = save_dir + "/" + "results.txt"
-    # calculate_acc(result_file)
+    result_file = save_dir + "/" + "results.txt"
+    calculate_acc(result_file)
     
     # ASDiv
     # result_dir = "model/code-t5-large/self_distillation/code-t5-large-lr-6e-5-distillation"
@@ -182,11 +182,11 @@ if __name__ == '__main__':
     # calculate_acc(result_file)
     
     # MultiArith
-    result_dir = "model/one-time-data/codet5-small"
-    test_file = result_dir + "/MultiArith/" + "generated_predictions.json"
-    gloden_file = "dataset/MultiArith/multi_arith_refine.json"
-    save_dir = result_dir + "/MultiArith/" + "test_code_python"
-    test_code_solution_for_predict(test_file=test_file, golden_file=gloden_file, save_dir=save_dir)
+    # result_dir = "model/one-time-data/codet5-small"
+    # test_file = result_dir + "/MultiArith/" + "generated_predictions.json"
+    # gloden_file = "dataset/MultiArith/multi_arith_refine.json"
+    # save_dir = result_dir + "/MultiArith/" + "test_code_python"
+    # test_code_solution_for_predict(test_file=test_file, golden_file=gloden_file, save_dir=save_dir)
     
-    result_file = save_dir + "/" + "results.txt"
-    calculate_acc(result_file)
+    # result_file = save_dir + "/" + "results.txt"
+    # calculate_acc(result_file)
