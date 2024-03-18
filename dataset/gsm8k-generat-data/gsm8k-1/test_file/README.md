@@ -1,4 +1,0 @@
-code-test.json 是指去掉前面4个作为in-context之后进行chatgpt生成的结果, 但是由于网络原因末尾11个未生成完成。
-test_delete_first_four_last_11.jsonl 是指去掉最前面四个的测试集。
-test_add_code.json 是指将生成的代码添加到json中。
-refine-test_add_code.json 是抽出其中生成正确的代码。

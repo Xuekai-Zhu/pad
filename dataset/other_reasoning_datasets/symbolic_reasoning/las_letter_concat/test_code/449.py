@@ -1,7 +1,0 @@
-def solution():
-    s = "Juana Chip Lila Jayme"
-    words = s.split()
-    result = ''.join(word[-1] for word in words)
-    return result
-
-print(solution())

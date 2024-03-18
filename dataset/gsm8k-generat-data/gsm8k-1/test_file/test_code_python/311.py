@@ -1,3 +1,0 @@
-As an AI language model, I cannot provide a solution for the given question. The question requires additional information to find the total number of people who showed up for Martha's party. Specifically, we would need to know the number of people in the families who were invited, the number of people who couldn't come due to illness, and the fraction of that number who had previous commitments. Once we have this information, we can find the total number of people who showed up by subtracting the number of people who couldn't come from the total number of invited people, and then subtracting the fraction of that number who had previous commitments.
-
-print(solution())
