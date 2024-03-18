@@ -1,126 +1,0 @@
-WARNING:torch.distributed.run:
-*****************************************
-Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-*****************************************
-[01/29/23 14:30:39] INFO     colossalai - colossalai - INFO:                                                                                           
-                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:521 set_device               
-                    INFO     colossalai - colossalai - INFO: process rank 1 is bound to device 1                                                       
-[01/29/23 14:30:40] INFO     colossalai - colossalai - INFO:                                                                                           
-                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:521 set_device               
-                    INFO     colossalai - colossalai - INFO: process rank 0 is bound to device 0                                                       
-[01/29/23 14:30:43] INFO     colossalai - colossalai - INFO:                                                                                           
-                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:557 set_seed                 
-[01/29/23 14:30:43] INFO     colossalai - colossalai - INFO:                                                                                           
-                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/context/parallel_context.py:557 set_seed                 
-                    INFO     colossalai - colossalai - INFO: initialized seed on rank 1, numpy: 1024, python random: 1024, ParallelMode.DATA: 1024,    
-                             ParallelMode.TENSOR: 1024,the default parallel seed is ParallelMode.DATA.                                                 
-                    INFO     colossalai - colossalai - INFO: initialized seed on rank 0, numpy: 1024, python random: 1024, ParallelMode.DATA: 1024,    
-                             ParallelMode.TENSOR: 1024,the default parallel seed is ParallelMode.DATA.                                                 
-                    INFO     colossalai - colossalai - INFO: /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/initialize.py:117 launch 
-                    INFO     colossalai - colossalai - INFO: Distributed environment is initialized, data parallel size: 2, pipeline parallel size: 1, 
-                             tensor parallel size: 1                                                                                                   
-                    INFO     colossalai - colossalai - INFO: run_clm.py:280 main                                                                       
-                    INFO     colossalai - colossalai - INFO: Start preparing dataset                                                                   
-Found cached dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
-  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 433.77it/s]
-Found cached dataset wikitext (/root/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/1.0.0/a241db52902eaf2c6aa732210bead40c090019a499ceb13bcbfa3f8ab646a126)
-  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 424.73it/s]
-[01/29/23 14:30:49] INFO     colossalai - colossalai - INFO: run_clm.py:321 main                                                                       
-                    INFO     colossalai - colossalai - INFO: Dataset is prepared                                                                       
-[01/29/23 14:30:50] INFO     colossalai - colossalai - INFO: run_clm.py:337 main                                                                       
-                    INFO     colossalai - colossalai - INFO: Model config has been created                                                             
-Downloading:   0%|          | 0.00/685 [00:00<?, ?B/s]Downloading: 100%|██████████| 685/685 [00:00<00:00, 358kB/s]
-Downloading:   0%|          | 0.00/899k [00:00<?, ?B/s]Downloading:   1%|▏         | 12.3k/899k [00:00<00:17, 50.0kB/s]Downloading:   3%|▎         | 28.7k/899k [00:00<00:14, 59.7kB/s]Downloading:  11%|█         | 98.3k/899k [00:00<00:04, 161kB/s] Downloading:  24%|██▎       | 213k/899k [00:00<00:02, 280kB/s] Downloading:  46%|████▌     | 410k/899k [00:01<00:01, 466kB/s]Downloading:  77%|███████▋  | 688k/899k [00:01<00:00, 690kB/s]Downloading: 100%|██████████| 899k/899k [00:01<00:00, 598kB/s]
-Downloading:   0%|          | 0.00/456k [00:00<?, ?B/s]Downloading:   1%|          | 4.10k/456k [00:00<00:29, 15.4kB/s]Downloading:   7%|▋         | 32.8k/456k [00:00<00:09, 42.6kB/s]Downloading:  28%|██▊       | 128k/456k [00:01<00:02, 150kB/s]  Downloading:  39%|███▉      | 177k/456k [00:01<00:01, 159kB/s]Downloading:  50%|████▉     | 226k/456k [00:01<00:01, 165kB/s]Downloading:  60%|██████    | 275k/456k [00:01<00:01, 170kB/s]Downloading:  75%|███████▍  | 341k/456k [00:02<00:00, 191kB/s]Downloading:  85%|████████▌ | 390k/456k [00:02<00:00, 190kB/s]Downloading: 100%|█████████▉| 456k/456k [00:02<00:00, 207kB/s]Downloading: 100%|██████████| 456k/456k [00:02<00:00, 168kB/s]
-Downloading:   0%|          | 0.00/441 [00:00<?, ?B/s]Downloading: 100%|██████████| 441/441 [00:00<00:00, 213kB/s]
-[01/29/23 14:31:03] INFO     colossalai - colossalai - INFO: run_clm.py:343 main                                                                       
-                    INFO     colossalai - colossalai - INFO: GPT2Tokenizer has been created                                                            
-                    INFO     colossalai - colossalai - INFO: run_clm.py:358 main                                                                       
-                    INFO     colossalai - colossalai - INFO: Finetune a pre-trained model                                                              
-[01/29/23 14:31:05] INFO     colossalai - ProcessGroup - INFO:                                                                                         
-                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/tensor/process_group.py:24 get                           
-                    INFO     colossalai - ProcessGroup - INFO: NCCL initialize ProcessGroup on [0]                                                     
-                    INFO     colossalai - ProcessGroup - INFO:                                                                                         
-                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/tensor/process_group.py:24 get                           
-                    INFO     colossalai - ProcessGroup - INFO: NCCL initialize ProcessGroup on [1]                                                     
-                    INFO     colossalai - ProcessGroup - INFO:                                                                                         
-                             /root/anaconda3/envs/py38/lib/python3.8/site-packages/colossalai/tensor/process_group.py:24 get                           
-                    INFO     colossalai - ProcessGroup - INFO: NCCL initialize ProcessGroup on [0, 1]                                                  
-╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
-│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
-│ .py:574 in <module>                                                                              │
-│                                                                                                  │
-│   571                                                                                            │
-│   572                                                                                            │
-│   573 if __name__ == "__main__":                                                                 │
-│ ❱ 574 │   main()                                                                                 │
-│                                                                                                  │
-│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
-│ .py:370 in main                                                                                  │
-│                                                                                                  │
-│   367 │   # enable graident checkpointing                                                        │
-│   368 │   model.gradient_checkpointing_enable()                                                  │
-│   369 │                                                                                          │
-│ ❱ 370 │   chunk_size = ChunkManager.search_chunk_size(model, 64 * 1024 ** 2, 32)                 │
-│   371 │   pg = ProcessGroup()                                                                    │
-│   372 │   placement_policy = 'auto'                                                              │
-│   373 │   chunk_manager = ChunkManager(chunk_size, process_group=pg,                             │
-╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
-AttributeError: type object 'ChunkManager' has no attribute 'search_chunk_size'
-╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
-│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
-│ .py:574 in <module>                                                                              │
-│                                                                                                  │
-│   571                                                                                            │
-│   572                                                                                            │
-│   573 if __name__ == "__main__":                                                                 │
-│ ❱ 574 │   main()                                                                                 │
-│                                                                                                  │
-│ /root/zhuxuekai/comparison_methods_of_HITL/baselines/ColossalAI-Examples-opt/old_example/run_clm │
-│ .py:370 in main                                                                                  │
-│                                                                                                  │
-│   367 │   # enable graident checkpointing                                                        │
-│   368 │   model.gradient_checkpointing_enable()                                                  │
-│   369 │                                                                                          │
-│ ❱ 370 │   chunk_size = ChunkManager.search_chunk_size(model, 64 * 1024 ** 2, 32)                 │
-│   371 │   pg = ProcessGroup()                                                                    │
-│   372 │   placement_policy = 'auto'                                                              │
-│   373 │   chunk_manager = ChunkManager(chunk_size, process_group=pg,                             │
-╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
-AttributeError: type object 'ChunkManager' has no attribute 'search_chunk_size'
-ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 27706) of binary: /root/anaconda3/envs/py38/bin/python
-Traceback (most recent call last):
-  File "/root/anaconda3/envs/py38/bin/torchrun", line 8, in <module>
-    sys.exit(main())
-  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
-    return f(*args, **kwargs)
-  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/run.py", line 761, in main
-    run(args)
-  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/run.py", line 752, in run
-    elastic_launch(
-  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/root/anaconda3/envs/py38/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 245, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-run_clm.py FAILED
-------------------------------------------------------------
-Failures:
-[1]:
-  time      : 2023-01-29_14:31:12
-  host      : f9748dd6478e
-  rank      : 1 (local_rank: 1)
-  exitcode  : 1 (pid: 27707)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2023-01-29_14:31:12
-  host      : f9748dd6478e
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 27706)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================

@@ -1,1 +1,0 @@
-in-context-exmalpe 1/2 分别是从测试集前0-4/5-8 的样本利用chatGPT生成答案。

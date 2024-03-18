@@ -1,3 +1,0 @@
-18
-
-print(solution())
