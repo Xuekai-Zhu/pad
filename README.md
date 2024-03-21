@@ -22,6 +22,7 @@ than Chain-of-thought Fine-tuning](https://arxiv.org/abs/2305.13888) (NAACL 2024
    └── SVAMP # test data with pad-augmented label code
    └── ASDiv # test data with pad-augmented label code
 ```
+The data of self-refine task is [here](https://huggingface.co/datasets/xuekai/pad_train)
 
 ## Quick Start
 
@@ -43,3 +44,5 @@ run the following scripts to generate your results:
 ```shell
 sh run_seq2seq_test.sh
 ```
+
+
