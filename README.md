@@ -1,7 +1,7 @@
 # PaD
 
 This repo inculdes the code in the paper [PaD: Program-aided Distillation Can Teach Small Models Reasoning Better
-than Chain-of-thought Fine-tuning](https://github.com/Xuekai-Zhu/pad/blob/master/paper/PaD%3A%20Program-aided%20Distillation%20Can%20Teach%20Small%20Models%20Reasoning%20Better%20than%20Chain-of-thought%20Fine-tuning.pdf) (NAACL 2024 Long Paper).
+than Chain-of-thought Fine-tuning](https://arxiv.org/abs/2305.13888) (NAACL 2024 Long Paper).
 
 ![Main_figure](paper/figure_1.png)
 
@@ -22,6 +22,7 @@ than Chain-of-thought Fine-tuning](https://github.com/Xuekai-Zhu/pad/blob/master
    └── SVAMP # test data with pad-augmented label code
    └── ASDiv # test data with pad-augmented label code
 ```
+The data of self-refine task is [here](https://huggingface.co/datasets/xuekai/pad_train)
 
 ## Quick Start
 
@@ -43,3 +44,5 @@ run the following scripts to generate your results:
 ```shell
 sh run_seq2seq_test.sh
 ```
+
+
