@@ -59,7 +59,7 @@ from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version, is_offline_mode, send_example_telemetry
 from transformers.utils.versions import require_version
 import json
-from revised_forward_for_distillation import SD_T5ForConditionalGeneration, CustomTrainer
+# from revised_forward_for_distillation import SD_T5ForConditionalGeneration, CustomTrainer
 # from step_by_step_verfiying import ReasoningEvaluator, ReasoningSteps, batch_parse_chain
 from step_by_step_verfiying_with_bs import T5ForConditionalGeneration_with_chain_verifying
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
@@ -443,12 +443,12 @@ def main():
     #     use_auth_token=True if model_args.use_auth_token else None,
     # )
     
-    if model_args.teacher_model_name_or_path is not None:
-        teacher_model = AutoModelForSeq2SeqLM.from_pretrained(model_args.teacher_model_name_or_path)
-        model = SD_T5ForConditionalGeneration.from_pretrained_with_teacher(
-            model_args.model_name_or_path, 
-            teacher_model=teacher_model,
-            config=config)
+    # if model_args.teacher_model_name_or_path is not None:
+    #     teacher_model = AutoModelForSeq2SeqLM.from_pretrained(model_args.teacher_model_name_or_path)
+    #     model = SD_T5ForConditionalGeneration.from_pretrained_with_teacher(
+    #         model_args.model_name_or_path, 
+    #         teacher_model=teacher_model,
+    #         config=config)
         
     # elif "llama" in model_args.model_name_or_path:
     # #     tokenizer = LlamaTokenizer.from_pretrained(model_args.teacher_model_name_or_path)
@@ -714,32 +714,32 @@ def main():
     )
 
     # Initialize our Trainer ->
-    if  model_args.teacher_model_name_or_path is not None:
-        trainer = CustomTrainer(
-            model=model,
-            args=training_args,
-            train_dataset=train_dataset if training_args.do_train else None,
-            eval_dataset=eval_dataset if training_args.do_eval else None,
-            tokenizer=tokenizer,
-            data_collator=data_collator,
-            # compute_metrics=compute_metrics if training_args.predict_with_generate else None,
-            callbacks=[
-                EarlyStoppingCallback(early_stopping_patience=3), 
-                    ]
-        )
-    else:
-        trainer = Seq2SeqTrainer(
-            model=model,
-            args=training_args,
-            train_dataset=train_dataset if training_args.do_train else None,
-            eval_dataset=eval_dataset if training_args.do_eval else None,
-            tokenizer=tokenizer,
-            data_collator=data_collator,
-            # compute_metrics=compute_metrics if training_args.predict_with_generate else None,
-            callbacks=[
-                EarlyStoppingCallback(early_stopping_patience=3), 
-                    ]
-        )
+    # if  model_args.teacher_model_name_or_path is not None:
+    #     trainer = CustomTrainer(
+    #         model=model,
+    #         args=training_args,
+    #         train_dataset=train_dataset if training_args.do_train else None,
+    #         eval_dataset=eval_dataset if training_args.do_eval else None,
+    #         tokenizer=tokenizer,
+    #         data_collator=data_collator,
+    #         # compute_metrics=compute_metrics if training_args.predict_with_generate else None,
+    #         callbacks=[
+    #             EarlyStoppingCallback(early_stopping_patience=3), 
+    #                 ]
+    #     )
+    # else:
+    trainer = Seq2SeqTrainer(
+        model=model,
+        args=training_args,
+        train_dataset=train_dataset if training_args.do_train else None,
+        eval_dataset=eval_dataset if training_args.do_eval else None,
+        tokenizer=tokenizer,
+        data_collator=data_collator,
+        # compute_metrics=compute_metrics if training_args.predict_with_generate else None,
+        callbacks=[
+            EarlyStoppingCallback(early_stopping_patience=3), 
+                ]
+    )
 
     # Training
     if training_args.do_train:
